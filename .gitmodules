@@ -1,0 +1,3 @@
+[submodule "GENRE"]
+	path = GENRE
+	url = https://github.com/facebookresearch/GENRE
