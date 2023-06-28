@@ -21,6 +21,17 @@ There are files in the MALT dataset:
 * `gold_wikidata.json` contains the gold facts
 * `mal_wiki.json` contains the corresponding Wikipedia pages
 ### Run Example
+Given the input document: 
+> Lhasa de Sela said that the song was about inner happiness and
+"feeling my feet in the earth, having a place in the world, of things
+taking care of themselves.“ In May 2009, her collaboration
+with Patrick Watson was released.
+
+We'd like to extract the collaborators for the singer "Lhasa de Sela".
 ```python
-python train.py -dataset data/wiki_100.vec
+python two_stage_pipeline.py -run_example True
 ```
+After, the output is shown below:
+> ( Lhasa de Sela, collaborator, Patrick Watson, 0.4763992584808626 ) <br />
+> ( Lhasa de Sela, collaborator, Patrick Watson (musician), 0.3224404241174992 ) <br />
+> ( Lhasa de Sela, collaborator, Patrick Watson (producer), 0.2401321410226018 ) <br />
