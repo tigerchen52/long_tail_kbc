@@ -14,4 +14,13 @@ The second stage validates the candidates and disambiguates the retained answer 
 ## Usage
 ### Data Preparation
 We developed a new dataset with an emphasis on the long-tail challenge, called [MALT](https://zenodo.org/record/8092562) (for “Multi-token, Ambiguous, Long-Tailed facts”).
-After downloading, put the embedding file in the path `data/`.
+After downloading, put the MALT file in the root path.
+There are files in the MALT dataset:
+* `malt_eval.txt` contains entity IDs for evaluation
+* `malt_hold_out.txt` contains entity IDs for adjusting the hyper-parameters
+* `gold_wikidata.json` contains the gold facts
+* `mal_wiki.json` contains the corresponding Wikipedia pages
+### Run Example
+```python
+python train.py -dataset data/wiki_100.vec
+```
