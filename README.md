@@ -20,6 +20,11 @@ There are files in the MALT dataset:
 * `malt_hold_out.txt` contains entity IDs for adjusting the hyper-parameters
 * `gold_wikidata.json` contains the gold facts
 * `mal_wiki.json` contains the corresponding Wikipedia pages
+The below table shows the stats of the MALT dataset, which contains many multi-token, ambiguous, and long-tail facts.
+<p align="center">
+<img src="figure/malt.png" width="600">
+</p>
+
 ### Run Example
 Given the input document: 
 > Lhasa de Sela said that the song was about inner happiness and
@@ -35,3 +40,14 @@ After, the output is shown below:
 > ( Lhasa de Sela, collaborator, Patrick Watson, 0.4763992584808626 ) <br />
 > ( Lhasa de Sela, collaborator, Patrick Watson (musician), 0.3224404241174992 ) <br />
 > ( Lhasa de Sela, collaborator, Patrick Watson (producer), 0.2401321410226018 ) <br />
+### Run MALT
+
+```python
+python two_stage_pipeline.py -run_example False
+```
+After, you can get two files:
+* `extracted_facts.txt` stores the facts extracted by our framework
+* `score.txt` stores the evaluation scores (precision, recall, and f1)
+
+## Acknowledgements
+*This work was partially funded by ANR-20-CHIA0012-01 (“NoRDF”).*
