@@ -21,6 +21,7 @@ There are five files in the MALT dataset:
 * `gold_wikidata.json` contains the gold facts
 * `mal_wiki.json` contains the corresponding Wikipedia pages
 * `entity_name_qid.txt`
+  
 The below table shows the stats of the MALT dataset, which contains many multi-token, ambiguous, and long-tail facts.
 <p align="center">
 <img src="figure/malt.png" width="600">
