@@ -15,11 +15,12 @@ The second stage validates the candidates and disambiguates the retained answer 
 ### Data Preparation
 We developed a new dataset with an emphasis on the long-tail challenge, called [MALT](https://zenodo.org/record/8092562) (for “Multi-token, Ambiguous, Long-Tailed facts”).
 After downloading, put the MALT file in the root path.
-There are files in the MALT dataset:
+There are five files in the MALT dataset:
 * `malt_eval.txt` contains entity IDs for evaluation
 * `malt_hold_out.txt` contains entity IDs for adjusting the hyper-parameters
 * `gold_wikidata.json` contains the gold facts
 * `mal_wiki.json` contains the corresponding Wikipedia pages
+* `entity_name_qid.txt`
 The below table shows the stats of the MALT dataset, which contains many multi-token, ambiguous, and long-tail facts.
 <p align="center">
 <img src="figure/malt.png" width="600">
