@@ -1,11 +1,11 @@
 # Knowledge Base Completion for Long-Tail Entities
-In this work, we propose an unsupervised framework for knowledge base completion and a new dataset named [MALT](https://zenodo.org/record/8092562). The main benefits of our approach are:
+In this work, we propose an unsupervised framework for knowledge base completion and a new dataset named [MALT](https://zenodo.org/record/8092562) for evaluation. The main benefits of our approach are:
 * **fully prompt-based**. To extract a new relation, the only thing needed in this framework is to design a prompt.
 * **can deal with multi-token and ambiguous entities**
 * **work well on long-tail entities**
 
 <p align="center">
-<img src="figure/framework.png" width="900">
+<img src="figure/framework.png" width="800">
 </p>
 Our method employs two different LMs in a two-stage pipeline as shown in the above Figure. 
 The first stage generates candidate answers to input prompts and gives cues to retrieve informative sentences from Wikipedia and other sources. 
