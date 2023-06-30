@@ -8,6 +8,7 @@ import template
 import argparse
 import sys
 import torch
+import evaluate
 
 #hyper-parameters
 parser = argparse.ArgumentParser(description='contrastive learning framework for word vector')
@@ -15,12 +16,13 @@ parser.add_argument('-malt_dataset', help='the file path of the MALT evaluation 
 parser.add_argument('-hold_out_dataset', help='the hold-out dataset', type=str, default='MALT/malt_hold_out.txt')
 parser.add_argument('-qa_model', help='the name of the qa model for candidate generation ', type=str, default='mrm8488/spanbert-finetuned-squadv2')
 parser.add_argument('-output_path', help='the file of extracted facts', type=str, default='extracted_facts.txt')
-parser.add_argument('-wikipedia_dataset', help='Wikipedia pages ', type=str, default='MALT/mal_wiki.json')
+parser.add_argument('-score_path', help='the file to store the eval score', type=str, default='score.txt')
+parser.add_argument('-wikipedia_dataset', help='Wikipedia pages ', type=str, default='MALT/wikipedia.json')
 parser.add_argument('-topk', help='topk', type=int, default=20)
 parser.add_argument('-max_len', help='the maximum length of an input context sentence', type=int, default=1024)
 parser.add_argument('-min_can_name_len', help='the minimum length of a candidate name', type=int, default=3)
 parser.add_argument('-min_sen_len', help='the minimum length of a sentence', type=int, default=30)
-parser.add_argument('-run_example', help='if run the example', type=bool, default=False)
+parser.add_argument('-run_example', help='if run the example', type=bool, default=True)
 
 
 try:
@@ -102,6 +104,7 @@ def run_on_malt():
                         f.flush()
 
 
+
 def run_example():
     doc = """
         Lhasa de Sela said that the song was about inner happiness and
@@ -111,7 +114,7 @@ def run_example():
     """
     name = 'Lhasa de Sela'
     candidates = candidate_generation.generate(model_for_candidate, name, doc, topk=args.topk,
-                                               my_templates=['the person collaborated with which person?'])
+                                               templates=['the person collaborated with which person?'])
 
     for can_name in candidates:
         if len(can_name) < args.min_can_name_len: continue
@@ -137,3 +140,4 @@ if __name__ == '__main__':
         run_example()
     else:
         run_on_malt()
+        evaluate.run_eval([args.output_path], args.score_path, args.malt_dataset, args.hold_out_dataset, args.gold_path)
