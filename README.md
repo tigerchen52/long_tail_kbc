@@ -19,7 +19,7 @@ There are five files in the MALT dataset:
 * `malt_eval.txt` contains entity IDs for evaluation
 * `malt_hold_out.txt` contains entity IDs for adjusting the hyper-parameters
 * `gold_wikidata.json` contains the gold facts
-* `mal_wiki.json` contains the corresponding Wikipedia pages
+* `wikipedia.json` contains the corresponding Wikipedia pages
 * `entity_name_qid.txt`
   
 The below table shows the stats of the MALT dataset, which contains many multi-token, ambiguous, and long-tail facts.
