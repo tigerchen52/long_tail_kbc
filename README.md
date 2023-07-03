@@ -12,6 +12,35 @@ The first stage generates candidate answers to input prompts and gives cues to r
 The second stage validates the candidates and disambiguates the retained answer strings onto entities in the underlying KG (e.g., mapping “Yves Desrosiers” to Yves Desrosiers (guitarist)).
 
 ## Usage
+The repo structure is shown below. `two_stage_pipeline.py` is the code of our two-stage framework
+```
+ROOT:.
+¦   candidate_generation.py
+¦   corroboration.py
+¦   evaluate.py
+¦   LICENSE
+¦   README.md
+¦   template.py
+¦   two_stage_pipeline.py
+¦   utils.py
+¦   
++---GENRE
+¦
++---data
+¦       entity_name_qid.txt
+¦       gold_wikidata.json
+¦       malt_eval.txt
+¦       malt_hold_out.txt
+¦       wikipedia.json
+¦
++---figure
+¦       framework.png
+¦       malt.png
+¦       prompt.png
+¦       
+
+```
+
 ### Data Preparation
 We developed a new dataset with an emphasis on the long-tail challenge, called [MALT](https://zenodo.org/record/8098881) (for “Multi-token, Ambiguous, Long-Tailed facts”).
 After downloading, put the MALT file in the root path.
