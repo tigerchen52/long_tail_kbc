@@ -12,7 +12,7 @@ The first stage generates candidate answers to input prompts and gives cues to r
 The second stage validates the candidates and disambiguates the retained answer strings onto entities in the underlying KG (e.g., mapping “Yves Desrosiers” to Yves Desrosiers (guitarist)).
 
 ## Usage
-The repo structure is shown below. `two_stage_pipeline.py` is the code of our two-stage framework
+The repo structure is shown below. The `two_stage_pipeline.py` file is the code of our two-stage framework, the [GENRE](https://github.com/facebookresearch/GENRE) path is a submodule that for the corroboration step, and the `data` path contains the MALT dataset
 ```
 ROOT:.
 ¦   candidate_generation.py
