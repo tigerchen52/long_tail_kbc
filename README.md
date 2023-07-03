@@ -53,3 +53,6 @@ After, you can get two files:
 
 ## Acknowledgements
 *This work was partially funded by ANR-20-CHIA0012-01 (“NoRDF”).*
+
+## License
+The MALT dataset is licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) and the code is licensed under the MIT license
