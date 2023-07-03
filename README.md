@@ -38,9 +38,7 @@ ROOT:.
 ¦       malt.png
 ¦       prompt.png
 ¦       
-
 ```
-
 ### Data Preparation
 We developed a new dataset with an emphasis on the long-tail challenge, called [MALT](https://zenodo.org/record/8098881) (for “Multi-token, Ambiguous, Long-Tailed facts”).
 After downloading, put the MALT file in the root path.
