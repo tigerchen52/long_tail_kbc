@@ -80,7 +80,7 @@ After, you can get two files:
 
 ## Resource
 * [Paper](https://arxiv.org/pdf/2306.17472.pdf)
-* [Data](https://www.mpi-inf.mpg.de/departments/databases-and-information-systems/research/knowledge-base-recall/lm4kbc/malt)
+* [Dataset](https://www.mpi-inf.mpg.de/departments/databases-and-information-systems/research/knowledge-base-recall/lm4kbc/malt)
 * [Code](https://github.com/tigerchen52/long_tail_kbc)
 
 ## Acknowledgements
