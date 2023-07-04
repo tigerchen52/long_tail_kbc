@@ -78,6 +78,11 @@ After, you can get two files:
 * `extracted_facts.txt` stores the facts extracted by our framework
 * `score.txt` stores the evaluation scores (precision, recall, and f1)
 
+## Resource
+* [Paper](https://arxiv.org/pdf/2306.17472.pdf)
+* [Data](https://www.mpi-inf.mpg.de/departments/databases-and-information-systems/research/knowledge-base-recall/lm4kbc/malt)
+* [Code](https://github.com/tigerchen52/long_tail_kbc)
+
 ## Acknowledgements
 *This work was partially funded by ANR-20-CHIA0012-01 (“NoRDF”).*
 
